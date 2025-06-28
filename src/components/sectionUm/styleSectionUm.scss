@@ -1,0 +1,82 @@
+@use '../../styles/variables';
+
+.sectionUm {
+  background-image: url('../../assets/images/imgSectionUm.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); // camada escura para contraste
+    z-index: 0;
+  }
+
+  .conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      sub {
+        font-size: 14px;
+        vertical-align: baseline;
+      }
+    }
+
+    h1 {
+      font-size: 64px;
+      font-weight: 800;
+      font-family: 'Merriweather', serif;
+    }
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      p {
+        font-size: 16px;
+      }
+
+      button {
+        margin-top: 20px;
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        padding: 12px 24px;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        align-self: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: variables.$corSiteGlobal;
+          color: white;
+          border-color: white;
+        }
+      }
+    }
+  }
+}
