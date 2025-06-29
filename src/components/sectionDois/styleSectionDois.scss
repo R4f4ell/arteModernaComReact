@@ -1,0 +1,62 @@
+@use '../../styles/variables';
+
+.sectionDois {
+  background-color: variables.$corSiteGlobal;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding: 0 20px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+    width: 45%;
+    height: 40%;
+
+    p {
+      &:nth-child(1) {
+        font-size: 18px;
+      }
+
+      &:nth-child(2) {
+        font-size: 40px;
+        font-family: 'Merriweather';
+        text-align: center;
+      }
+
+      &:nth-child(3) {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    div {
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    height: auto;
+    padding: 60px 20px;
+
+    div {
+      width: 80%;
+      gap: 30px;
+
+      p:nth-child(2) {
+        font-size: 28px;
+      }
+
+      p:nth-child(3) {
+        font-size: 16px;
+      }
+    }
+  }
+}

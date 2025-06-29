@@ -1,0 +1,94 @@
+@use '../../styles/variables';
+
+#sectionSeis {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  padding: 60px 40px;
+  height: 100%;
+  background-color: white;
+
+  .centro-img {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+
+    .imgJulia {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 2px;
+    }
+  }
+
+  .centro-texto {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    div {
+      .about {
+        font-size: 20px;
+        color: variables.$corSiteGlobal;
+        font-weight: bold;
+      }
+
+      &:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: justify;
+
+        h2 {
+          font-size: 38px;
+          font-weight: 500;
+        }
+
+        p {
+          color: black;
+        }
+      }
+    }
+
+    .quote {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: 70%;
+
+      img {
+        width: 90px;
+        height: auto;
+      }
+
+      p {
+        font-style: italic;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+
+    .centro-img,
+    .centro-texto {
+      width: 90%;
+    }
+
+    .centro-texto {
+      .quote {
+        width: 100%;
+      }
+
+      div:nth-child(2) h2 {
+        font-size: 28px;
+      }
+    }
+  }
+}
