@@ -1,0 +1,60 @@
+@use '../../styles/variables';
+
+#sectionSete {
+  background-color: #f9f9f9e3; 
+  width: 100%;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .textoSectionSete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+
+    p {
+      &:nth-child(1) {
+        font-size: 25px;
+        color: variables.$corSiteGlobal;
+        font-weight: bold;
+      }
+
+      &:nth-child(2) {
+        font-size: 50px;
+        font-family: 'Merriweather';
+        font-weight: 600;
+      }
+
+      &:nth-child(3) {
+        color: black;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .textoSectionSete {
+        width: 80%;
+
+      p:nth-child(1) {
+        font-size: 20px;
+      }
+
+      p:nth-child(2) {
+        font-size: 32px;
+      }
+
+      p:nth-child(3) {
+        font-size: 13px;
+      }
+    }
+  }
+}
