@@ -1,5 +1,9 @@
 @use '../styles/variables';
 
+body {
+  font-family: variables.$fontePrincipal;
+}
+
 button {
   max-width: 160px;
   margin-top: 20px;
