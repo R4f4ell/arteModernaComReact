@@ -1,0 +1,99 @@
+@use '../../styles/variables';
+
+.footer {
+  background-color: variables.$corSiteGlobal;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  scroll-margin-top: 100px;
+
+  &__container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__brand {
+    flex: 1 1 300px;
+
+    p {
+      font-size: 40px;
+      font-weight: bold;
+    }
+  }
+
+  &__info {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__contact,
+  &__social {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__line {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1.5rem;
+
+    img {
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    &__brand {
+      display: none; 
+    }
+
+    &__title {
+      font-size: 22px;
+    }
+
+    &__line {
+      font-size: 17px;
+    }
+
+    &__icons {
+      justify-content: center;
+    }
+  }
+}

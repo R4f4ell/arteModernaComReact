@@ -1,0 +1,65 @@
+@use '../../styles/variables';
+
+.sectionNove {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90%;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  scroll-margin-top: 100px;
+
+  &__info,
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 400px;
+  }
+
+  &__info {
+    gap: 20px;
+    width: 35%;
+
+    p:nth-child(1) {
+      font-size: 45px;
+    }
+
+    p:nth-child(2) {
+      color: black;
+    }
+  }
+
+  &__details {
+    gap: 35px;
+    width: 35%;
+
+    p {
+      color: black;
+    }
+
+    p:nth-child(1) {
+      font-size: 30px;
+    }
+  }
+
+  // Responsividade
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__info,
+    &__details {
+      width: 100%;
+      height: auto;
+    }
+
+    &__info p:nth-child(1) {
+      font-size: 32px;
+    }
+
+    &__details p:nth-child(1) {
+      font-size: 24px;
+    }
+  }
+}

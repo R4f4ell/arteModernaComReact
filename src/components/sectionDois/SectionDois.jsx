@@ -2,7 +2,7 @@ import './styleSectionDois.scss';
 
 const SectionDois = () => {
   return (
-    <section className="sectionDois">
+    <section className="sectionDois" id='sectionDois'>
       <div>
         <p>ABOUT THE EXHIBITION</p>
         <p>Real &amp; true moment</p>

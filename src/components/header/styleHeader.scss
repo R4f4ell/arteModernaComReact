@@ -11,6 +11,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: box-shadow 0.3s ease;
+
+  &.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
 
   .mobile-menu {
     display: none;
@@ -86,6 +91,16 @@ header {
             border-bottom: 1px solid white;
             padding-bottom: 4px;
           }
+
+          &.ativo {
+            border-bottom: 2px solid white;
+            font-weight: bold;
+          }
+
+          &:focus {
+            outline: 2px dashed white;
+            outline-offset: 4px;
+          }
         }
       }
     }
@@ -95,7 +110,7 @@ header {
       top: 80px;
       left: 0;
       width: 100%;
-      background-color: #111;
+      background-color: variables.$corSiteGlobal;
       padding: 20px 0;
       transform: translateY(-100%);
       opacity: 0;

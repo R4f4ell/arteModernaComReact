@@ -7,6 +7,9 @@ import SectionCinco from "./components/sectionCinco/SectionCinco";
 import SectionSeis from "./components/sectionSeis/SectionSeis";
 import SectionSete from "./components/sectionSete/SectionSete";
 import SectionOito from "./components/sectionOito/SectionOito";
+import SectionNove from "./components/sectionNove/SectionNove";
+import SectionDez from "./components/sectionDez/SectionDez";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
       <SectionSeis />
       <SectionSete />
       <SectionOito />
+      <SectionNove />
+      <SectionDez />
+      <Footer />
     </>
   );
 }
